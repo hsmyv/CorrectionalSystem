@@ -34,9 +34,9 @@ class PageController extends Controller
                     $page->setMeta($meta_key, $meta_value);
                 }
             }
-            if ($request->hasFile('image')) {
-                $page->addMediaFromRequest('image')->toMediaCollection('image');
-            }
+            // if ($request->hasFile('image')) {
+            //     $page->addMediaFromRequest('image')->toMediaCollection('image');
+            // }
             return response()->json(['success' => 'OK'], 200);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);

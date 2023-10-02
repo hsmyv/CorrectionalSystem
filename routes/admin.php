@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
+    Route::post('/register', [AdminController::class, 'register']);
+    Route::post('/login',   [AdminController::class, 'login']);
 });
+
+Route::get('pages/{page}', [PageController::class, 'get']);
+Route::post('pages/{page}', [PageController::class, 'post']);
