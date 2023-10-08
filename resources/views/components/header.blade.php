@@ -61,7 +61,7 @@
                              <ul id="menu-main-menu" class="dl-menu greennature-main-mobile-menu">
                                  <li
                                      class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item">
-                                     <a href="index-2.html" aria-current="page">Home</a>
+                                     <a href="{{ route('web.home') }}" aria-current="page">Home</a>
                                  </li>
                                  <li class="menu-item menu-item-has-children menu-item-15"><a href="#">Pages</a>
                                      <ul class="dl-submenu">
@@ -111,105 +111,15 @@
                                      </ul>
                                  </li>
                                  <li class="menu-item menu-item-has-children"><a
-                                         href="portfolio-grid-3-columns-no-space.html">Portfolio</a>
-                                     <ul class="dl-submenu">
-                                         <li class="menu-item menu-item-has-children"><a
-                                                 href="portfolio-grid-3-columns.html">Portfolio Classic</a>
-                                             <ul class="dl-submenu">
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-1-column.html">Portfolio
-                                                         Grid 1 Column (Both Sidebar)</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-2-columns.html">Portfolio Grid 2
-                                                         Columns
-                                                         (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-3-columns.html">Portfolio Grid 3
-                                                         Columns</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-4-columns.html">Portfolio Grid 4
-                                                         Columns</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-2-columns-no-space.html">Portfolio
-                                                         Grid 2
-                                                         Columns, No Space</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-3-columns-no-space.html">Portfolio
-                                                         Grid 3
-                                                         Columns, No Space</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-4-columns-no-space.html">Portfolio
-                                                         Grid 4
-                                                         Columns, No Space</a></li>
-                                             </ul>
-                                         </li>
-                                         <li class="menu-item menu-item-has-children"><a
-                                                 href="portfolio-modern-3-columns-with-filter.html">Portfolio With
-                                                 Filter</a>
-                                             <ul class="dl-submenu">
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-1-columns-with-filter.html">Portfolio
-                                                         Grid
-                                                         1 Col With Filter</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-2-columns-with-filter.html">Portfolio
-                                                         Grid
-                                                         2 Cols With Filter</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-3-columns-with-filter.html">Portfolio
-                                                         Grid
-                                                         3 Cols With Filter</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-grid-4-columns-with-filter.html">Portfolio
-                                                         Grid
-                                                         4 Cols With Filter</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-modern-3-columns-with-filter.html">Portfolio
-                                                         Modern 3 Cols With Filter</a></li>
-                                                 <li class="menu-item"><a
-                                                         href="portfolio-modern-4-columns-with-filter.html">Portfolio
-                                                         Modern 4 Cols With Filter</a></li>
-                                                 <li class="menu-item"><a href="singleprod.html">Single
-                                                         Portfolio</a>
-                                                 </li>
-                                             </ul>
-                                         </li>
-                                     </ul>
+                                         href="{{ route('web.blog') }}">Blog</a>
                                  </li>
-                                 <li class="menu-item menu-item-has-children"><a
-                                         href="blog-full-with-right-sidebar.html">Blog</a>
-                                     <ul class="dl-submenu">
-                                         <li class="menu-item"><a href="blog-full-with-right-sidebar.html">Blog
-                                                 Full</a></li>
-
-                                         <li ss="menu-item menu-item-has-children menu-item-"><a href="#">Blog
-                                                 Column</a>
-                                             <ul class="dl-submenu">
-                                                 <li class="menu-item"><a href="blog-1-column.html">Blog 1 Column
-                                                         (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a href="blog-2-columns.html">Blog 2 Columns
-                                                         (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a href="blog-3-columns.html">Blog 3
-                                                         Columns</a>
-                                                 </li>
-                                                 <li class="menu-item"><a href="blog-4-columns.html">Blog 4
-                                                         Columns</a>
-                                                 </li>
-                                             </ul>
-                                         </li>
-                                         <li class="menu-item menu-item-has-children menu-item-7"><a
-                                                 href="#">Blog Masonry</a>
-                                             <ul class="dl-submenu">
-                                                 <li class="menu-item"><a href="blog-2-columns-masonry.html">Blog 2
-                                                         Columns &#8211; Masonry (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a href="blog-3-columns-masonry.html">Blog 3
-                                                         Columns – Masonry</a></li>
-                                                 <li class="menu-item"><a href="blog-4-columns-masonry.html">Blog 4
-                                                         Columns – Masonry</a></li>
-                                             </ul>
-                                         </li>
-
-                                     </ul>
+                                 <li
+                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     <a href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
+                                 </li>
+                                 <li
+                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     <a href="{{ route('web.contact') }}" class="sf-with-ul-pre">Contact</a>
                                  </li>
 
                              </ul>
@@ -221,7 +131,7 @@
                          <nav class="greennature-navigation" id="greennature-main-navigation">
                              <ul id="menu-main-menu-1" class="sf-menu greennature-main-menu">
                                  <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"><a
-                                         href="index-2.html"><i class="fa fa-home"></i>Home</a></li>
+                                         href="{{ route('web.home') }}"><i class="fa fa-home"></i>Home</a></li>
                                  <li class="menu-item menu-item-has-children greennature-normal-menu"><a
                                          href="#" class="sf-with-ul-pre"><i
                                              class="fa fa-file-text-o"></i>Pages</a>
@@ -275,103 +185,18 @@
                                          </li>
                                      </ul>
                                  </li>
-                                 <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-mega-menu">
-                                     <a href="portfolio-grid-3-columns-no-space.html" class="sf-with-ul-pre"><i
-                                             class="fa fa-globe"></i>Portfolio</a>
-                                     <div class="sf-mega">
-                                         <ul class="sub-menu">
-                                             <li class="menu-item menu-item-has-children" data-column="four columns"
-                                                 data-size="1/3"><a href="portfolio-grid-3-columns.html"
-                                                     class="sf-with-ul-pre">Portfolio Classic</a>
-                                                 <ul class="sub-menu">
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-1-column.html">Portfolio Grid 1
-                                                             Column
-                                                             (Both Sidebar)</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-2-columns.html">Portfolio Grid 2
-                                                             Columns (Right Sidebar)</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-3-columns.html">Portfolio Grid 3
-                                                             Columns</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-4-columns.html">Portfolio Grid 4
-                                                             Columns</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-2-columns-no-space.html">Portfolio
-                                                             Grid 2 Columns, No Space</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-3-columns-no-space.html">Portfolio
-                                                             Grid 3 Columns, No Space</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-4-columns-no-space.html">Portfolio
-                                                             Grid 4 Columns, No Space</a></li>
-                                                 </ul>
-                                             </li>
-                                             <li class="menu-item menu-item-has-children" data-column="four columns"
-                                                 data-size="1/3"><a href="portfolio-modern-3-columns-with-filter.html"
-                                                     class="sf-with-ul-pre">Portfolio With Filter</a>
-                                                 <ul class="sub-menu">
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-1-columns-with-filter.html">Portfolio
-                                                             Grid 1 Col With Filter</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-2-columns-with-filter.html">Portfolio
-                                                             Grid 2 Cols With Filter</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-3-columns-with-filter.html">Portfolio
-                                                             Grid 3 Cols With Filter</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-grid-4-columns-with-filter.html">Portfolio
-                                                             Grid 4 Cols With Filter</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-modern-3-columns-with-filter.html">Portfolio
-                                                             Modern 3 Cols With Filter</a></li>
-                                                     <li class="menu-item"><a
-                                                             href="portfolio-modern-4-columns-with-filter.html">Portfolio
-                                                             Modern 4 Cols With Filter</a></li>
-                                                     <li class="menu-item"><a href="singleprod.html">Single
-                                                             Portfolio</a></li>
-                                                 </ul>
-                                             </li>
 
-                                         </ul>
-                                     </div>
+                                 <li
+                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     <a href="{{ route('web.blog') }}" class="sf-with-ul-pre">Blog</a>
                                  </li>
                                  <li
                                      class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
-                                     <a href="blog-full-with-right-sidebar.html" class="sf-with-ul-pre">Blog</a>
-                                     <ul class="sub-menu">
-                                         <li class="menu-item"><a href="blog-full-with-right-sidebar.html">Blog
-                                                 Full</a></li>
-                                         <li class="menu-item menu-item-has-children menu-item-"><a href="#"
-                                                 class="sf-with-ul-pre">Blog Column</a>
-                                             <ul class="sub-menu">
-                                                 <li class="menu-item"><a href="blog-1-column.html">Blog 1 Column
-                                                         (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a href="blog-2-columns.html">Blog 2 Columns
-                                                         (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a href="blog-3-columns.html">Blog 3
-                                                         Columns</a>
-                                                 </li>
-                                                 <li class="menu-item"><a href="blog-4-columns.html">Blog 4
-                                                         Columns</a>
-                                                 </li>
-                                             </ul>
-                                         </li>
-                                         <li class="menu-item menu-item-has-children menu-item-7"><a href="#"
-                                                 class="sf-with-ul-pre">Blog Masonry</a>
-                                             <ul class="sub-menu">
-                                                 <li class="menu-item"><a href="blog-2-columns-masonry.html">Blog 2
-                                                         Columns &#8211; Masonry (Right Sidebar)</a></li>
-                                                 <li class="menu-item"><a href="blog-3-columns-masonry.html">Blog 3
-                                                         Columns – Masonry</a></li>
-                                                 <li class="menu-item"><a href="blog-4-columns-masonry.html">Blog 4
-                                                         Columns – Masonry</a></li>
-                                             </ul>
-                                         </li>
-                                     </ul>
+                                     <a href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
+                                 </li>
+                                 <li
+                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     <a href="{{ route('web.contact') }}" class="sf-with-ul-pre">Contact</a>
                                  </li>
                              </ul>
                              <a class="greennature-donate-button greennature-lb-payment"><span
