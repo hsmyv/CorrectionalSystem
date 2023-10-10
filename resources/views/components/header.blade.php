@@ -118,6 +118,10 @@
                                      <a href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
                                  </li>
                                  <li
+                                     class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item">
+                                     <a href="{{ route('web.about') }}" aria-current="page">About Us</a>
+                                 </li>
+                                 <li
                                      class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
                                      <a href="{{ route('web.contact') }}" class="sf-with-ul-pre">Contact</a>
                                  </li>
@@ -193,6 +197,10 @@
                                  <li
                                      class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
                                      <a href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
+                                 </li>
+                                 <li
+                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     <a href="{{ route('web.about') }}" class="sf-with-ul-pre">About Us</a>
                                  </li>
                                  <li
                                      class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
