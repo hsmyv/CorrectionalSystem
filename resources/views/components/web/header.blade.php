@@ -52,7 +52,7 @@
                      <!-- logo -->
                      <div class="greennature-logo">
                          <div class="greennature-logo-inner">
-                             <a href="index-2.html">
+                             <a href="{{ route('web.home') }}">
                                  <img src="/images/logo.png" alt="" /> </a>
                          </div>
                          <div class="greennature-responsive-navigation dl-menuwrapper"
@@ -110,20 +110,20 @@
                                          </li>
                                      </ul>
                                  </li>
-                                 <li class="menu-item menu-item-has-children"><a
+                                 <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"><a
                                          href="{{ route('web.blog') }}">Blog</a>
                                  </li>
-                                 <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
-                                     <a href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
+                                 <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"> <a
+                                         href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
                                  </li>
-                                 <li
-                                     class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item">
-                                     <a href="{{ route('web.about') }}" aria-current="page">About Us</a>
+                                 <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"> <a
+                                         href="{{ route('web.about') }}" aria-current="page">About Us</a>
                                  </li>
-                                 <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
-                                     <a href="{{ route('web.contact') }}" class="sf-with-ul-pre">Contact</a>
+                                 <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"> <a
+                                         href="{{ route('web.qa') }}" aria-current="page">Q&A</a>
+                                 </li>
+                                 <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"> <a
+                                         href="{{ route('web.contact') }}" class="sf-with-ul-pre">Contact</a>
                                  </li>
 
                              </ul>
@@ -134,8 +134,10 @@
                      <div class="greennature-navigation-wrapper">
                          <nav class="greennature-navigation" id="greennature-main-navigation">
                              <ul id="menu-main-menu-1" class="sf-menu greennature-main-menu">
-                                 <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"><a
-                                         href="{{ route('web.home') }}"><i class="fa fa-home"></i>Home</a></li>
+                                 <li
+                                     class="menu-item menu-item-home {{ setActiveHeader('web.home') }}-menu-item greennature-normal-menu">
+                                     <a href="{{ route('web.home') }}"><i class="fa fa-home"></i>Home</a>
+                                 </li>
                                  <li class="menu-item menu-item-has-children greennature-normal-menu"><a
                                          href="#" class="sf-with-ul-pre"><i
                                              class="fa fa-file-text-o"></i>Pages</a>
@@ -191,19 +193,23 @@
                                  </li>
 
                                  <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     class="menu-item menu-item-home {{ setActiveHeader('web.blog') }}-menu-item greennature-normal-menu">
                                      <a href="{{ route('web.blog') }}" class="sf-with-ul-pre">Blog</a>
                                  </li>
                                  <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     class="menu-item menu-item-home {{ setActiveHeader('web.service') }}-menu-item greennature-normal-menu">
                                      <a href="{{ route('web.service') }}" class="sf-with-ul-pre">Service</a>
                                  </li>
                                  <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     class="menu-item menu-item-home {{ setActiveHeader('web.about') }}-menu-item greennature-normal-menu">
                                      <a href="{{ route('web.about') }}" class="sf-with-ul-pre">About Us</a>
                                  </li>
                                  <li
-                                     class="menu-item menu-item-has-childrenmenu-item menu-item-has-children greennature-normal-menu">
+                                     class="menu-item menu-item-home {{ setActiveHeader('web.qa') }}-menu-item greennature-normal-menu">
+                                     <a href="{{ route('web.qa') }}" aria-current="page">Q&A</a>
+                                 </li>
+                                 <li
+                                     class="menu-item menu-item-home {{ setActiveHeader('web.contact') }}-menu-item greennature-normal-menu">
                                      <a href="{{ route('web.contact') }}" class="sf-with-ul-pre">Contact</a>
                                  </li>
                              </ul>

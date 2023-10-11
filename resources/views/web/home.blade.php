@@ -1,4 +1,4 @@
-<x-layout>
+<x-web.layout>
 
 
     <!-- is search -->
@@ -10,21 +10,21 @@
             <!-- Sidebar With Content Section-->
             <div class="with-sidebar-wrapper">
 
-                <x-home.slide />
+                <x-web.home.slide />
 
-                <x-home.feature />
+                <x-web.home.feature />
 
-                <x-home.donate />
+                <x-web.home.donate />
 
-                <x-home.projects />
+                <x-web.home.projects />
 
-                <x-home.twitter />
+                <x-web.home.twitter />
 
-                <x-home.greennature />
+                <x-web.home.greennature />
 
-                <x-home.newsletter />
+                <x-web.home.newsletter />
 
-                <x-home.statistics />
+                <x-web.home.statistics />
             </div>
             <!-- Below Sidebar Section-->
 
@@ -34,4 +34,4 @@
     </div>
     <!-- content wrapper -->
 
-</x-layout>
+</x-web.layout>

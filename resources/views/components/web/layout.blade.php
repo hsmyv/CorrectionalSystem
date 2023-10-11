@@ -59,9 +59,9 @@
 <script type='text/javascript' src='/plugins/jquery.transit.min.js'></script>
 <script type='text/javascript' src='/plugins/gdlr-portfolio/gdlr-portfolio-script.js'></script>
 
-<x-header />
+<x-web.header />
 {{ $slot }}
-<x-footer />
+<x-web.footer />
 
 <script>
     (function($) {

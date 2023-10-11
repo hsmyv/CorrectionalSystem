@@ -27,4 +27,8 @@ class WebController extends Controller
     {
         return view("web.blog");
     }
+    public function qa()
+    {
+        return view("web.qa");
+    }
 }

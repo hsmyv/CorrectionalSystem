@@ -1,6 +1,6 @@
         <!-- is search -->
 
-        <x-layout>
+        <x-web.layout>
 
             <div class="greennature-page-title-wrapper header-style-5-title-wrapper">
                 <div class="greennature-page-title-overlay"></div>
@@ -24,7 +24,7 @@
                                         <div class="section-container container">
                                             <div class="blog-item-wrapper">
                                                 <div class="blog-item-holder">
-                                                    <x-blog.post />
+                                                    <x-web.blog.post />
 
 
                                                     <div class="greennature-item greennature-blog-full">
@@ -138,7 +138,7 @@
                                 <div class="clear"></div>
                             </div>
 
-                            <x-blog.sidebar />
+                            <x-web.blog.sidebar />
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -151,4 +151,4 @@
             </div>
             <!-- content wrapper -->
 
-        </x-layout>
+        </x-web.layout>
