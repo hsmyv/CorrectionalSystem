@@ -44,4 +44,10 @@ class AdminController extends Controller
             'expires_in' => JWTFactory::getTTL() * 60,
         ]);
     }
+
+
+    public function index()
+    {
+        return view("admin.dashboard");
+    }
 }

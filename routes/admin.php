@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PageController;
 
@@ -23,3 +24,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
 
 Route::get('pages/{page}', [PageController::class, 'get']);
 Route::post('pages/{page}', [PageController::class, 'post']);
+
+
+Route::get('/index', [AdminController::class, 'index'])->name("index");
+Route::get('/home', [HomeController::class, 'index'])->name("home.index");
