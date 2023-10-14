@@ -15,23 +15,44 @@
             <li>
                 <a href="#" class="ttr-material-button">
                     <span class="ttr-icon"><i class="ti-email"></i></span>
-                    <span class="ttr-label">Mailbox</span>
+                    <span class="ttr-label">Blog</span>
                     <span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+
                 </a>
                 <ul>
                     <li>
-                        <a href="mailbox.html" class="ttr-material-button"><span class="ttr-label">Mail
-                                Box</span></a>
+                        <a href="{{ route('admin.blog.index') }}" class="ttr-material-button"><span
+                                class="ttr-label">Blog Page</span></a>
                     </li>
                     <li>
-                        <a href="mailbox-compose.html" class="ttr-material-button"><span
-                                class="ttr-label">Compose</span></a>
-                    </li>
-                    <li>
-                        <a href="mailbox-read.html" class="ttr-material-button"><span class="ttr-label">Mail
-                                Read</span></a>
+                        <a href="{{ route('admin.posts.index') }}" class="ttr-material-button"><span
+                                class="ttr-label">Posts</span></a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="#" class="ttr-material-button">
+                    <span class="ttr-icon"><i class="ti-email"></i></span>
+                    <span class="ttr-label">Service</span>
+                    <span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{ route('admin.service.index') }}" class="ttr-material-button"><span
+                                class="ttr-label">Service Page</span></a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.services.index') }}" class="ttr-material-button"><span
+                                class="ttr-label">Services</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ route('admin.about.index') }}" class="ttr-material-button">
+                    <span class="ttr-icon"><i class="ti-email"></i></span>
+                    <span class="ttr-label">About Us</span>
+                </a>
             </li>
             <li>
                 <a href="#" class="ttr-material-button">

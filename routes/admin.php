@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,8 @@ use App\Http\Controllers\Admin\PageController;
 |
 */
 
+Route::resource('/posts', BlogController::class);
+Route::resource('/services', ServiceController::class);
 
 Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
     Route::post('/register', [AdminController::class, 'register']);
@@ -28,3 +33,6 @@ Route::post('pages/{page}', [PageController::class, 'post']);
 
 Route::get('/index', [AdminController::class, 'index'])->name("index");
 Route::get('/home', [HomeController::class, 'index'])->name("home.index");
+Route::get('/blog', [BlogController::class, 'blog_page'])->name("blog.index");
+Route::get('/service', [ServiceController::class, 'service_page'])->name("service.index");
+Route::get('/about', [AboutController::class, 'about_page'])->name("about.index");

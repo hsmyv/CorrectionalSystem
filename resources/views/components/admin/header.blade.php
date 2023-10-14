@@ -11,9 +11,9 @@
          <div class="ttr-logo-box">
              <div>
                  <a href="index.html" class="ttr-logo">
-                     <img class="ttr-logo-mobile" alt="" src="../admin/assets/images/logo-mobile.png"
+                     <img class="ttr-logo-mobile" alt="" src="../../admin/assets/images/logo-mobile.png"
                          width="30" height="30">
-                     <img class="ttr-logo-desktop" alt="" src="../admin/assets/images/logo-white.png"
+                     <img class="ttr-logo-desktop" alt="" src="../../admin/assets/images/logo-white.png"
                          width="160" height="27">
                  </a>
              </div>
