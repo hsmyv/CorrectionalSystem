@@ -3,7 +3,7 @@
      <div class="body-wrapper  float-menu" data-home="https://demo.goodlayers.com/greennature/">
          <header class="greennature-header-wrapper header-style-5-wrapper greennature-header-with-top-bar">
              <!-- top navigation -->
-             <div class="top-navigation-wrapper">
+             {{-- <div class="top-navigation-wrapper">
                  <div class="top-navigation-container container">
                      <div class="top-navigation-left">
                          <div class="top-navigation-left-text">
@@ -44,7 +44,7 @@
                      </div>
                      <div class="clear"></div>
                  </div>
-             </div>
+             </div> --}}
              <div id="greennature-header-substitute"></div>
              <div class="greennature-header-inner header-inner-header-style-5">
                  <div class="greennature-header-container container">
@@ -138,9 +138,8 @@
                                      class="menu-item menu-item-home {{ setActiveHeader('web.home') }}-menu-item greennature-normal-menu">
                                      <a href="{{ route('web.home') }}"><i class="fa fa-home"></i>Home</a>
                                  </li>
-                                 <li class="menu-item menu-item-has-children greennature-normal-menu"><a
-                                         href="#" class="sf-with-ul-pre"><i
-                                             class="fa fa-file-text-o"></i>Pages</a>
+                                 <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="#"
+                                         class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>Pages</a>
                                      <ul class="sub-menu">
                                          <li class="menu-item"><a href="act-now.html">Act Now</a></li>
                                          <li class="menu-item"><a href="about-1.html">About Us 1</a></li>

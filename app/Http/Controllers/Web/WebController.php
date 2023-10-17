@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomePage;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
     public function home()
     {
-        return view("web.home");
+        $homePage = HomePage::where('id', 1)->first();
+        return view("web.home", ["homePage" => $homePage]);
     }
     public function about()
     {

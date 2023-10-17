@@ -44,7 +44,9 @@
                             <h4>{{ setActiveBreadcrumb('admin.home.index', 'Home') }}</h4>
                         </div>
                         <div class="widget-inner">
-                            <form class="edit-profile m-b30">
+                            <form class="edit-profile m-b30" method="POST" action="{{ route('admin.home.store') }}"
+                                enctype="multipart/form-data">
+                                @csrf
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="ml-auto">
@@ -62,26 +64,27 @@
                                             <input name="first_slide_first_word" class="form-control" type="text"
                                                 value="Together">
                                         </div>
+
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">First Slide's second word</label>
                                         <div>
                                             <input name="first_slide_second_word" class="form-control" type="text"
-                                                value="CTO">
+                                                value="We can heal">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">First Slide's third word</label>
                                         <div>
                                             <input name="first_slide_third_word" class="form-control" type="text"
-                                                value="CTO">
+                                                value="The Earth">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">First Slide's button</label>
                                         <div>
                                             <input name="first_slide_button" class="form-control" type="text"
-                                                value="CTO">
+                                                value="Learn More">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -142,14 +145,14 @@
                                         <label class="col-form-label">Third Slide's first word</label>
                                         <div>
                                             <input name="third_slide_first_word" class="form-control" type="text"
-                                                value="The Better Place">
+                                                value="Make This World">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Third Slide's second word</label>
                                         <div>
                                             <input name="third_slide_second_word" class="form-control" type="text"
-                                                value="Make This World">
+                                                value="The Better Place">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -385,6 +388,13 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-4">
+                                        <label class="col-form-label">Subscribe To Newsletter's button</label>
+                                        <div>
+                                            <input name="subscribe_button" class="form-control" type="text"
+                                                value="Subscribe!">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-4">
                                         <label class="col-form-label">Subscribe To Newsletter's Background
                                             Image</label>
                                         <div>
@@ -393,9 +403,10 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <button type="reset" class="btn">Save changes</button>
+                                        <button type="submit" class="btn">Save changes</button>
                                         <button type="reset" class="btn-secondry">Cancel</button>
                                     </div>
+
                                 </div>
                             </form>
                         </div>

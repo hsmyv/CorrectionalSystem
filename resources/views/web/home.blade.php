@@ -10,7 +10,7 @@
             <!-- Sidebar With Content Section-->
             <div class="with-sidebar-wrapper">
 
-                <x-web.home.slide />
+                <x-web.home.slide :homePage="$homePage" />
 
                 <x-web.home.feature />
 

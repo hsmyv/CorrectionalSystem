@@ -30,10 +30,10 @@
     <main class="ttr-wrapper">
         <div class="container-fluid">
             <div class="db-breadcrumb">
-                <h4 class="breadcrumb-title">{{ setActiveBreadcrumb('admin.blog.index', 'Blog') }}</h4>
+                <h4 class="breadcrumb-title">Q&A</h4>
                 <ul class="db-breadcrumb-list">
                     <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-                    <li>{{ setActiveBreadcrumb('admin.blog.index', 'Blog') }}</li>
+                    <li>Q&A</li>
                 </ul>
             </div>
             <div class="row">
@@ -41,12 +41,10 @@
                 <div class="col-lg-12 m-b30">
                     <div class="widget-box">
                         <div class="wc-title">
-                            <h4>{{ setActiveBreadcrumb('admin.blog.index', 'Blog') }}</h4>
+                            <h4>Q&A</h4>
                         </div>
                         <div class="widget-inner">
-                            <form class="edit-profile m-b30" method="POST" action="{{ route('admin.blog.store') }}"
-                                enctype="multipart/form-data">
-                                @csrf
+                            <form class="edit-profile m-b30">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="ml-auto">
@@ -77,95 +75,103 @@
                                             <input name="bckg_img" class="form-control" type="file">
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <button type="reset" class="btn">Save changes</button>
-                                    </div>
+
                                 </div>
-                            </form>
-                            <div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x">
-                            </div>
-                            <form class="edit-profile m-b30">
+                                <div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x">
+                                </div>
                                 <div class="row">
                                     <div class="col-12 m-t20">
                                         <div class="ml-auto">
-                                            <h3 class="m-form__section">2.Recent Works</h3>
+                                            <h3 class="m-form__section">2.Mail Configuration</h3>
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
-                                        <label class="col-form-label">Recent Works Status</label>
+                                        <label class="col-form-label">Mail </label>
                                         <div>
+                                            <input name="mail" class="form-control" type="text"
+                                                value="hsmusayev@gmail.com">
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x">
-                            </div>
-                            <form class="edit-profile m-b30">
-                                <div class="row">
-                                    <div class="col-12 m-t20">
-                                        <div class="ml-auto">
-                                            <h3 class="m-form__section">3.Recent Comments</h3>
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
-                                        <label class="col-form-label">Recent Comments</label>
+                                        <label class="col-form-label">Password </label>
                                         <div>
-
+                                            <input name="password" class="form-control" type="password" value="">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-6">
+                                    <button type="reset" class="btn">Save changes</button>
+                                </div>
                             </form>
-                            <div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x">
-                            </div>
-                            <form class="edit-profile">
-                                <div class="row">
-                                    <div class="col-12 m-t20">
-                                        <div class="ml-auto">
-                                            <h3 class="m-form__section">4. Add Item</h3>
-                                        </div>
+                        </div>
+                        <div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x">
+                        </div>
+                        <form class="edit-profile">
+                            <div class="row">
+                                <div class="col-12 m-t20">
+                                    <div class="ml-auto">
+                                        <h3 class="m-form__section">3. Question and Answer</h3>
                                     </div>
-                                    <div class="col-12">
-                                        <table id="item-add" style="width:100%;">
-                                            <tr class="list-item">
-                                                <td>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <label class="col-form-label">Tag Name</label>
-                                                            <div>
-                                                                <input name="tag_names[]" class="form-control"
-                                                                    type="text" value="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-2">
-                                                            <label class="col-form-label">Close</label>
-                                                            <div class="form-group">
-                                                                <a class="delete" href="#"><i
-                                                                        class="fa fa-close"></i></a>
-                                                            </div>
+                                </div>
+                                <div class="col-12">
+                                    <table id="item-add" style="width:100%;">
+                                        <tr class="list-item">
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label class="col-form-label">Question Title</label>
+                                                        <div>
+                                                            <input name="question_titles[]" class="form-control"
+                                                                type="text" value="">
                                                         </div>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="button" class="btn-secondry add-item m-r5"><i
-                                                class="fa fa-fw fa-plus-circle"></i>Add Item</button>
-                                        <button type="reset" class="btn">Save changes</button>
-                                    </div>
-                                </div>
-                            </form>
+                                                    <div class="col-md-4">
+                                                        <label class="col-form-label">Question's Answer</label>
+                                                        <div>
+                                                            <textarea name="question_answers[]" class="form-control" type="text" value=""></textarea>
+                                                        </div>
+                                                    </div>
 
-                        </div>
+                                                    <div class="col-md-2">
+                                                        <label class="col-form-label">Close</label>
+                                                        <div class="form-group">
+                                                            <a class="delete" href="#"><i
+                                                                    class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn-secondry add-item m-r5"><i
+                                            class="fa fa-fw fa-plus-circle"></i>Add Item</button>
+                                    <button type="reset" class="btn">Save changes</button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
-            <!-- Your Profile Views Chart END-->
+        </div>
+        <!-- Your Profile Views Chart END-->
         </div>
         </div>
     </main>
     <div class="ttr-overlay"></div>
+
+    <script>
+        function loadFile(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+            }
+        }
+    </script>
+
 
 </x-admin.layout>

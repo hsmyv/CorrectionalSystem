@@ -3,9 +3,11 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\QaController;
 use App\Http\Controllers\Admin\ServiceController;
 
 /*
@@ -32,7 +34,11 @@ Route::post('pages/{page}', [PageController::class, 'post']);
 
 
 Route::get('/index', [AdminController::class, 'index'])->name("index");
-Route::get('/home', [HomeController::class, 'index'])->name("home.index");
+Route::get('/home', [HomeController::class, 'home_page'])->name("home.index");
+Route::post('/home', [HomeController::class, 'home_page_store'])->name("home.store");
 Route::get('/blog', [BlogController::class, 'blog_page'])->name("blog.index");
+Route::post('/blog', [BlogController::class, 'blog_page_store'])->name("blog.store");
 Route::get('/service', [ServiceController::class, 'service_page'])->name("service.index");
 Route::get('/about', [AboutController::class, 'about_page'])->name("about.index");
+Route::get('/qa', [QaController::class, 'qa_page'])->name("qa.index");
+Route::get('/contact', [ContactController::class, 'contact_page'])->name("contact.index");

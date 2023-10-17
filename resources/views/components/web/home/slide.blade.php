@@ -10,13 +10,13 @@
                     <div id="slider_1" class="master-slider ms-skin-default">
                         <div class="ms-slide" data-delay="7" data-fill-mode="fill">
                             <img src="/plugins/masterslider/public/assets/css/blank.gif" alt="" title=""
-                                data-src="/upload/slider-1.jpg" />
-
+                                data-src="{{ $homePage->getFirstMediaUrl('first_slide_image') }}" />
                             <a href="#" target="_self"
                                 class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
                                 data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="400"
                                 data-delay="987" data-ease="easeOutQuint" data-type="button" data-offset-x="1"
-                                data-offset-y="208" data-origin="ml" data-position="normal">Learn More</a>
+                                data-offset-y="208" data-origin="ml"
+                                data-position="normal">{{ $homePage->first_slide_button }}</a>
 
                             <div class="ms-layer  msp-cn-1-3" style=""
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625"
@@ -51,19 +51,19 @@
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625"
                                 data-ease="easeOutQuint" data-offset-x="0" data-offset-y="139" data-origin="ml"
                                 data-position="normal">
-                                Save Anim</div>
+                                {{ $homePage->second_slide_second_word }}</div>
 
                             <div class="ms-layer  msp-cn-1-7" style=""
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625"
                                 data-ease="easeOutQuint" data-offset-x="383" data-offset-y="139" data-origin="ml"
                                 data-position="normal">
-                                als</div>
+                                {{ $homePage->second_slide_third_word }}</div>
 
                             <div class="ms-layer  msp-cn-1-5" style=""
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="350"
                                 data-ease="easeOutQuint" data-offset-x="0" data-offset-y="52" data-origin="ml"
                                 data-position="normal">
-                                Help Us</div>
+                                {{ $homePage->second_slide_first_word }}</div>
 
                         </div>
                         <div class="ms-slide" data-delay="7" data-fill-mode="fill">
