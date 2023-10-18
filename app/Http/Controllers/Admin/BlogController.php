@@ -3,16 +3,28 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BlogPageRequest;
+use App\Models\BlogPage;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     public function blog_page()
     {
-        return view("admin.pages.blog");
+        $blogPage = BlogPage::first();
+        if (!$blogPage) {
+            $blogPage = BlogPage::create(['upper_slide_title' => '', 'upper_slide_description' => '']);
+        }
+        return view("admin.pages.blog", ['blogPage' => $blogPage]);
     }
-    public function blog_page_store()
+    public function blog_page_store(BlogPageRequest $request)
     {
+        $blogPage = BlogPage::first();
+        if ($blogPage) {
+            $blogPage->update(array_merge($request->validated()));
+            uploadImage($blogPage, 'upper_slide_bckg_img');
+        }
+        return view("admin.pages.blog", ['blogPage' => $blogPage]);
     }
     /**
      * Display a listing of the resource.

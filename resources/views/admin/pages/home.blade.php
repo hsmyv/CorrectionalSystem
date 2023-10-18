@@ -62,7 +62,7 @@
                                         <label class="col-form-label">First Slide's first word</label>
                                         <div>
                                             <input name="first_slide_first_word" class="form-control" type="text"
-                                                value="Together">
+                                                value="{{ old('first_slide_first_word', $homePage->first_slide_first_word) }}">
                                         </div>
 
                                     </div>
@@ -70,21 +70,21 @@
                                         <label class="col-form-label">First Slide's second word</label>
                                         <div>
                                             <input name="first_slide_second_word" class="form-control" type="text"
-                                                value="We can heal">
+                                                value="{{ old('first_slide_second_word', $homePage->first_slide_second_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">First Slide's third word</label>
                                         <div>
                                             <input name="first_slide_third_word" class="form-control" type="text"
-                                                value="The Earth">
+                                                value="{{ old('first_slide_third_word', $homePage->first_slide_third_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">First Slide's button</label>
                                         <div>
                                             <input name="first_slide_button" class="form-control" type="text"
-                                                value="Learn More">
+                                                value="{{ old('first_slide_button', $homePage->first_slide_button) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -104,28 +104,28 @@
                                         <label class="col-form-label">Second Slide's first word</label>
                                         <div>
                                             <input name="second_slide_first_word" class="form-control" type="text"
-                                                value="Help Us">
+                                                value="{{ old('second_slide_first_word', $homePage->second_slide_first_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Second Slide's second word</label>
                                         <div>
                                             <input name="second_slide_second_word" class="form-control" type="text"
-                                                value="SAVE ANIM">
+                                                value="{{ old('second_slide_second_word', $homePage->second_slide_second_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Second Slide's third word</label>
                                         <div>
                                             <input name="second_slide_third_word" class="form-control" type="text"
-                                                value="ALS">
+                                                value="{{ old('second_slide_third_word', $homePage->second_slide_third_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Second Slide's button</label>
                                         <div>
                                             <input name="second_slide_button" class="form-control" type="text"
-                                                value="Learn More">
+                                                value="{{ old('second_slide_button', $homePage->second_slide_button) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -145,14 +145,14 @@
                                         <label class="col-form-label">Third Slide's first word</label>
                                         <div>
                                             <input name="third_slide_first_word" class="form-control" type="text"
-                                                value="Make This World">
+                                                value="{{ old('third_slide_first_word', $homePage->third_slide_first_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Third Slide's second word</label>
                                         <div>
                                             <input name="third_slide_second_word" class="form-control" type="text"
-                                                value="The Better Place">
+                                                value="{{ old('third_slide_second_word', $homePage->third_slide_second_word) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -170,7 +170,7 @@
                                         <label class="col-form-label">Features' button (EN)</label>
                                         <div>
                                             <input name="features_button" class="form-control" type="text"
-                                                value="Learn More">
+                                                value="{{ old('features_button', $homePage->features_button) }}">
                                         </div>
                                     </div>
                                     {{-- Datas will come from services --}}
@@ -195,27 +195,28 @@
                                         <label class="col-form-label">Title</label>
                                         <div>
                                             <input name="donate_title" class="form-control" type="text"
-                                                value="Make Donation">
+                                                value="{{ old('donate_title', $homePage->donate_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Excerpt</label>
                                         <div>
                                             <input name="donate_excerpt" class="form-control" type="text"
-                                                value="Your money can cure this earth">
+                                                value="{{ old('donate_excerpt', $homePage->donate_excerpt) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Button</label>
                                         <div>
                                             <input name="donate_button" class="form-control" type="text"
-                                                value="Donate Now">
+                                                value="{{ old('donate_button', $homePage->donate_button) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-6">
                                         <label class="col-form-label">Content</label>
                                         <div>
-                                            <textarea name="donate_content" class="form-control" type="text" value="">We are a larhge froup of people who powered movement fighting for a green and peaceful future for your land, forest, ocenas, foods, climate and pass the green earth to our children. Each one of us can make small changes in our lives, but together we can change the world.</textarea>
+                                            <textarea name="donate_content" class="form-control" type="text"
+                                                value="{{ old('donate_content', $homePage->donate_content) }}">{{ old('donate_content', $homePage->donate_content) }}</textarea>
                                         </div>
                                     </div>
 
@@ -229,27 +230,28 @@
                                         <label class="col-form-label">Title</label>
                                         <div>
                                             <input name="act_title" class="form-control" type="text"
-                                                value="Stop Drilling, Need Action!">
+                                                value="{{ old('act_title', $homePage->act_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Excerpt</label>
                                         <div>
                                             <input name="act_excerpt" class="form-control" type="text"
-                                                value="Your voice does matter">
+                                                value="{{ old('act_excerpt', $homePage->act_excerpt) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Button</label>
                                         <div>
                                             <input name="act_button" class="form-control" type="text"
-                                                value="Act Now">
+                                                value="{{ old('act_button', $homePage->act_button) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-6">
                                         <label class="col-form-label">Content</label>
                                         <div>
-                                            <textarea name="act_content" class="form-control" type="text" value="">The Obama administration just granted Shell’s final permit to drill in the Alaskan Arctic this summer despite overwhelming global public opposition and the obvious risks to Arctic communities, wildlife, and our climate. But this isn’t over. The President knows what’s at stake: his climate legacy.</textarea>
+                                            <textarea name="act_content" class="form-control" type="text"
+                                                value="{{ old('act_content', $homePage->act_content) }}">{{ old('act_content', $homePage->act_content) }}</textarea>
                                         </div>
                                     </div>
                                     <div
@@ -302,7 +304,7 @@
                                         <label class="col-form-label">First Writing's title</label>
                                         <div>
                                             <input name="first_writing_title" class="form-control" type="text"
-                                                value="MOLLIS MATTIS">
+                                                value="{{ old('first_writing_title', $homePage->first_writing_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-6">
@@ -310,7 +312,7 @@
                                         <div>
                                             <input name="first_writing_description" class="form-control"
                                                 type="text"
-                                                value="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo.">
+                                                value="{{ old('first_writing_description', $homePage->first_writing_description) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -328,7 +330,7 @@
                                         <label class="col-form-label">Second Writing's title</label>
                                         <div>
                                             <input name="second_writing_title" class="form-control" type="text"
-                                                value="MOLLIS MATTIS">
+                                                value="{{ old('second_writing_title', $homePage->second_writing_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-6">
@@ -336,7 +338,7 @@
                                         <div>
                                             <input name="second_writing_description" class="form-control"
                                                 type="text"
-                                                value="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo.">
+                                                value="{{ old('second_writing_description', $homePage->second_writing_description) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -354,7 +356,7 @@
                                         <label class="col-form-label">Third Writing's title</label>
                                         <div>
                                             <input name="third_writing_title" class="form-control" type="text"
-                                                value="MOLLIS MATTIS">
+                                                value="{{ old('third_writing_title', $homePage->third_writing_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-6">
@@ -362,7 +364,7 @@
                                         <div>
                                             <input name="third_writing_description" class="form-control"
                                                 type="text"
-                                                value="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo.">
+                                                value="I{{ old('third_writing_description', $homePage->third_writing_description) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
@@ -384,14 +386,14 @@
                                         <label class="col-form-label">Subscribe To Newsletter's title</label>
                                         <div>
                                             <input name="subscribe_title" class="form-control" type="text"
-                                                value="Subscribe To Newsletter">
+                                                value="{{ old('subscribe_title', $homePage->subscribe_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-4">
                                         <label class="col-form-label">Subscribe To Newsletter's button</label>
                                         <div>
                                             <input name="subscribe_button" class="form-control" type="text"
-                                                value="Subscribe!">
+                                                value="{{ old('subscribe_button', $homePage->subscribe_button) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-4">

@@ -4,13 +4,14 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\HomePage;
+use App\Models\ServicePage;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
     public function home()
     {
-        $homePage = HomePage::where('id', 1)->first();
+        $homePage = HomePage::first();
         return view("web.home", ["homePage" => $homePage]);
     }
     public function about()
@@ -23,7 +24,8 @@ class WebController extends Controller
     }
     public function service()
     {
-        return view("web.service");
+        $servicePage = ServicePage::first();
+        return view("web.service", ["servicePage" => $servicePage]);
     }
     public function blog()
     {

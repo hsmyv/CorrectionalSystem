@@ -61,24 +61,25 @@
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Title</label>
                                         <div>
-                                            <input name="title" class="form-control" type="text" value="Together">
+                                            <input name="upper_slide_title" class="form-control" type="text"
+                                                value="{{ old('upper_slide_title', $blogPage->upper_slide_title) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Description</label>
                                         <div>
-                                            <input name="description" class="form-control" type="text"
-                                                value="CTO">
+                                            <input name="upper_slide_description" class="form-control" type="text"
+                                                value="{{ old('upper_slide_description', $blogPage->upper_slide_description) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-2">
                                         <label class="col-form-label">Background Image</label>
                                         <div>
-                                            <input name="bckg_img" class="form-control" type="file">
+                                            <input name="upper_slide_bckg_img" class="form-control" type="file">
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button type="reset" class="btn">Save changes</button>
+                                        <button type="submit" class="btn">Save changes</button>
                                     </div>
                                 </div>
                             </form>

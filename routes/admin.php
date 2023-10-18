@@ -39,6 +39,7 @@ Route::post('/home', [HomeController::class, 'home_page_store'])->name("home.sto
 Route::get('/blog', [BlogController::class, 'blog_page'])->name("blog.index");
 Route::post('/blog', [BlogController::class, 'blog_page_store'])->name("blog.store");
 Route::get('/service', [ServiceController::class, 'service_page'])->name("service.index");
+Route::post('/service', [ServiceController::class, 'service_page_store'])->name("service.store");
 Route::get('/about', [AboutController::class, 'about_page'])->name("about.index");
 Route::get('/qa', [QaController::class, 'qa_page'])->name("qa.index");
 Route::get('/contact', [ContactController::class, 'contact_page'])->name("contact.index");

@@ -11,10 +11,10 @@
 
             <!-- Sidebar With Content Section-->
             <div class="with-sidebar-wrapper">
-                <x-web.service.slide />
+                <x-web.service.slide :servicePage="$servicePage" />
                 <x-web.service.services />
 
-                <x-web.service.middlesection />
+                <x-web.service.middlesection :servicePage="$servicePage" />
 
                 <x-web.service.statistic />
 

@@ -136,7 +136,7 @@
                               style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a>
                   </div>
                   <div class="copyright-right">
-                      <a target="_blank" href="https://www.templateshub.net">Templates Hub</a>
+                      <a target="_blank" href="https://www.templateshub.net">HStudio Webs</a>
                   </div>
                   <div class="clear"></div>
               </div>

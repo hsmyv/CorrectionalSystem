@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class BlogPage extends Model implements HasMedia
+class ServicePage extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
     protected $guarded = [];
-    protected $table = 'blog_page';
+    protected $table = 'service_page';
     public function registerMediaCollections(): void
     {
 

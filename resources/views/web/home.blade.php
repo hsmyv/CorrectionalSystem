@@ -14,15 +14,15 @@
 
                 <x-web.home.feature />
 
-                <x-web.home.donate />
+                <x-web.home.donate :homePage="$homePage" />
 
                 <x-web.home.projects />
 
                 <x-web.home.twitter />
 
-                <x-web.home.greennature />
+                <x-web.home.greennature :homePage="$homePage" />
 
-                <x-web.home.newsletter />
+                <x-web.home.newsletter :homePage="$homePage" />
 
                 <x-web.home.statistics />
             </div>

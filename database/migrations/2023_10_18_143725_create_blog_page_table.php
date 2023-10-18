@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('blog_page', function (Blueprint $table) {
             $table->id();
+            $table->string("upper_slide_title")->nullable();
+            $table->string("upper_slide_description")->nullable();
             $table->timestamps();
         });
     }

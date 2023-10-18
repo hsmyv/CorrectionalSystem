@@ -6,45 +6,32 @@
                             <div class="six columns">
                                 <div class="greennature-item greennature-action-ads-item"
                                     style="background: url('/upload/donation-bg-1.jpg'); ">
-                                    <h3 class="action-ads-title" style="color: #facc2e;">Make Donation</h3>
-                                    <div class="action-ads-caption greennature-skin-info">Your money can cure
-                                        this
-                                        earth</div>
+                                    <h3 class="action-ads-title" style="color: #facc2e;"> {{ $homePage->donate_title }}
+                                    </h3>
+                                    <div class="action-ads-caption greennature-skin-info">
+                                        {{ $homePage->donate_excerpt }}</div>
                                     <div class="action-ads-divider" style="background: #facc2e;"></div>
                                     <div class="action-ads-content">
-                                        <p>We are a larhge froup of people who powered movement fighting for a
-                                            green
-                                            and peaceful future for your land, forest, ocenas, foods, climate
-                                            and
-                                            pass the green earth to our children. Each one of us can make small
-                                            changes in our lives, but together we can change the world.</p>
+                                        <p> {{ $homePage->donate_content }}</p>
                                         <a class="action-ads-button large greennature-button greennature-lb-payment"
-                                            href="#" style="color: #6d5b1c;background-color: #fec428;">Donate
-                                            Now</a>
+                                            href="#" style="color: #6d5b1c;background-color: #fec428;">
+                                            {{ $homePage->donate_button }}</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="six columns">
                                 <div class="greennature-item greennature-action-ads-item"
                                     style="background: url('/upload/donation-bg-2.jpg'); ">
-                                    <h3 class="action-ads-title" style="color: #5dc269;">Stop Drilling, Need
-                                        Action!</h3>
-                                    <div class="action-ads-caption greennature-skin-info">Your voice does
-                                        matter
+                                    <h3 class="action-ads-title" style="color: #5dc269;">S{{ $homePage->act_title }}
+                                    </h3>
+                                    <div class="action-ads-caption greennature-skin-info">{{ $homePage->act_excerpt }}
                                     </div>
                                     <div class="action-ads-divider" style="background: #5dc269;"></div>
                                     <div class="action-ads-content">
-                                        <p>The Obama administration just granted Shell&#8217;s final permit to
-                                            drill
-                                            in the Alaskan Arctic this summer despite overwhelming global public
-                                            opposition and the obvious risks to Arctic communities, wildlife,
-                                            and
-                                            our climate. But this isn’t over. The President knows what’s at
-                                            stake:
-                                            his climate legacy.</p>
+                                        <p>{{ $homePage->donate_content }}</p>
                                         <a class="action-ads-button large greennature-button"
-                                            style="color: #ffffff;background-color: #5dc269;" href="#">Act
-                                            Now!</a>
+                                            style="color: #ffffff;background-color: #5dc269;"
+                                            href="#">{{ $homePage->act_button }}</a>
                                     </div>
                                 </div>
                             </div>

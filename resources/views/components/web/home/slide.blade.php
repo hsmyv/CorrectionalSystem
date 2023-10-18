@@ -22,24 +22,24 @@
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625"
                                 data-ease="easeOutQuint" data-offset-x="0" data-offset-y="105" data-origin="ml"
                                 data-position="normal">
-                                The Earth</div>
+                                {{ $homePage->first_slide_third_word }}</div>
 
                             <div class="ms-layer  msp-cn-1-2" style=""
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="425" data-delay="325"
                                 data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-5" data-origin="ml"
                                 data-position="normal">
-                                We can heal</div>
+                                {{ $homePage->first_slide_second_word }}</div>
 
                             <div class="ms-layer  msp-cn-1-1" style=""
                                 data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="350"
                                 data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-100" data-origin="ml"
                                 data-position="normal">
-                                Together</div>
+                                {{ $homePage->first_slide_first_word }}</div>
 
                         </div>
                         <div class="ms-slide" data-delay="7" data-fill-mode="fill">
                             <img src="/plugins/masterslider/public/assets/css/blank.gif" alt="" title=""
-                                data-src="/upload/slider-2.jpg" />
+                                data-src="{{ $homePage->getFirstMediaUrl('second_slide_image') }}" />
 
                             <a href="#" target="_self"
                                 class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
@@ -68,19 +68,19 @@
                         </div>
                         <div class="ms-slide" data-delay="7" data-fill-mode="fill">
                             <img src="/plugins/masterslider/public/assets/css/blank.gif" alt=""
-                                title="" data-src="/upload/slider-3.jpg" />
+                                title="" data-src="{{ $homePage->getFirstMediaUrl('third_slide_image') }}" />
 
                             <div class="ms-layer  msp-cn-1-10" style=""
                                 data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="425"
                                 data-delay="425" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="82"
                                 data-origin="mc" data-position="normal">
-                                The Better Place</div>
+                                {{ $homePage->third_slide_second_word }}</div>
 
                             <div class="ms-layer  msp-cn-1-13" style=""
                                 data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437"
                                 data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-15" data-origin="mc"
                                 data-position="normal">
-                                Make This World</div>
+                                {{ $homePage->third_slide_first_word }}</div>
 
                         </div>
                     </div>

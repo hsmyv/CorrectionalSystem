@@ -11,32 +11,26 @@ class HomeController extends Controller
 {
     public function home_page()
     {
-        return view("admin.pages.home");
+        $homePage = HomePage::first();
+        if (!$homePage) {
+            $homePage = HomePage::create(homePageInputs());
+        }
+        return view("admin.pages.home", ['homePage' => $homePage]);
     }
     public function home_page_store(HomePageRequest $request)
     {
-        $homePage = HomePage::findOrFail(1);
+        $homePage = HomePage::first();
         if ($homePage) {
             $homePage->update(array_merge($request->validated()));
-            uploadImage($homePage, 'first_slide_image', $request);
-            uploadImage($homePage, 'second_slide_image', $request);
-            uploadImage($homePage, 'third_slide_image', $request);
-            uploadImage($homePage, 'green_nature_image', $request);
-            uploadImage($homePage, 'first_writing_image', $request);
-            uploadImage($homePage, 'second_writing_image', $request);
-            uploadImage($homePage, 'third_writing_image', $request);
-            uploadImage($homePage, 'subcscribe_bcgk_img', $request);
-        } else {
-            $homePage = HomePage::create(array_merge($request->validated()));
-            uploadImage($homePage, 'first_slide_image', $request);
-            uploadImage($homePage, 'second_slide_image', $request);
-            uploadImage($homePage, 'third_slide_image', $request);
-            uploadImage($homePage, 'green_nature_image', $request);
-            uploadImage($homePage, 'first_writing_image', $request);
-            uploadImage($homePage, 'second_writing_image', $request);
-            uploadImage($homePage, 'third_writing_image', $request);
-            uploadImage($homePage, 'subcscribe_bcgk_img', $request);
+            uploadImage($homePage, 'first_slide_image');
+            uploadImage($homePage, 'second_slide_image');
+            uploadImage($homePage, 'third_slide_image');
+            uploadImage($homePage, 'green_nature_image');
+            uploadImage($homePage, 'first_writing_image');
+            uploadImage($homePage, 'second_writing_image');
+            uploadImage($homePage, 'third_writing_image');
+            uploadImage($homePage, 'subcscribe_bcgk_img');
         }
-        return view("admin.pages.home");
+        return view("admin.pages.home", ['homePage' => $homePage]);
     }
 }
