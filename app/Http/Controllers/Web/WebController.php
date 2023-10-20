@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutPage;
 use App\Models\HomePage;
 use App\Models\ServicePage;
 use Illuminate\Http\Request;
@@ -16,8 +17,8 @@ class WebController extends Controller
     }
     public function about()
     {
-        return view("web.about");
-    }
+        $aboutPage = AboutPage::first();
+        return view("web.about", ["aboutPage" => $aboutPage]);    }
     public function contact()
     {
         return view("web.contact");

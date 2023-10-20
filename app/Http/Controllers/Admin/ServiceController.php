@@ -13,7 +13,7 @@ class ServiceController extends Controller
     {
         $servicePage = ServicePage::first();
         if (!$servicePage) {
-            $servicePage = ServicePage::create(['upper_slide_title' => '', 'upper_slide_description' => '', 'middle_section_title' => '', 'middle_section_excerpt' => '', 'middle_section_content' => '', 'middle_section_video']);
+            $servicePage = ServicePage::create(['upper_slide_title' => '', 'upper_slide_description' => '', 'middle_section_title' => '', 'middle_section_excerpt' => '', 'middle_section_content' => '', 'middle_section_video' => '']);
         }
         return view("admin.pages.service", ['servicePage' => $servicePage]);
     }

@@ -8,8 +8,8 @@
 
             <!-- Sidebar With Content Section-->
             <div class="with-sidebar-wrapper">
-                <x-web.about.slide />
-                <x-web.about.middlesection />
+                <x-web.about.slide :aboutPage="$aboutPage" />
+                <x-web.about.middlesection :aboutPage="$aboutPage" />
                 <x-web.about.team />
                 <x-web.about.donate />
                 <x-web.about.statistic />

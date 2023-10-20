@@ -59,3 +59,7 @@ function homePageInputs()
         "subscribe_button"
     ];
 }
+function aboutPageInputs()
+{
+    return  ['upper_slide_title' => '', 'upper_slide_description' => '', 'middle_section_title' => '', 'middle_section_excerpt' => '', 'middle_section_content' => ''];
+}

@@ -3,19 +3,30 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AboutPageRequest;
+use App\Models\AboutPage;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
     public function about_page()
     {
-        return view("admin.pages.about");
+        $aboutPage = AboutPage::first();
+        if (!$aboutPage) {
+            $aboutPage = AboutPage::create(aboutPageInputs());
+        }
+        return view("admin.pages.about", ['aboutPage' => $aboutPage]);
     }
-    public function about_page_store()
+    public function about_page_store(AboutPageRequest $request)
     {
-        //
+        $aboutPage = AboutPage::first();
+        if ($aboutPage) {
+            $aboutPage->update(array_merge($request->validated()));
+            uploadImage($aboutPage, 'upper_slide_bckg_img');
+            uploadImage($aboutPage, 'middle_section_image');
+        }
+        return view("admin.pages.about", ['aboutPage' => $aboutPage]);
     }
-
     /**
      * Display a listing of the resource.
      */

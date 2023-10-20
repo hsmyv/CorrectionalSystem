@@ -3,10 +3,9 @@
         <div class="container">
             <div class="six columns">
                 <div class="greennature-video-item greennature-item">
-                    <video src="{{ URL::asset('storage/' . $servicePage->middle_section_video) }}" width="620"
+                    <video src="{{ asset('storage/' . $servicePage->middle_section_video) }}" width="620"
                         height="348" controls></video>
                 </div>
-                {{ dd(URL::asset('storage/' . $servicePage->middle_section_video)) }}
             </div>
             <div class="six columns">
                 <div class="greennature-item greennature-about-us-item greennature-normal">

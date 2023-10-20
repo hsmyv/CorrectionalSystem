@@ -9,9 +9,9 @@
                     <div class="greennature-item-title-container container">
                         <div class="greennature-item-title-head">
                             <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">
-                                STORY ABOUT US</h3>
+                                {{ $aboutPage->upper_slide_title }}</h3>
                             <div class="greennature-item-title-caption greennature-skin-info">
-                                Condimentum Ipsum Vestibulum</div>
+                                {{ $aboutPage->upper_slide_description }}</div>
                             <div class="clear"></div>
                         </div>
                     </div>

@@ -8,12 +8,12 @@
             <div class="six columns">
                 <div class="greennature-item greennature-about-us-item greennature-normal">
                     <div class="about-us-title-wrapper">
-                        <h3 class="about-us-title">Risus Ultricies Fringilla Fusce</h3>
-                        <div class="about-us-caption greennature-title-font greennature-skin-info">Amet
-                            Dapibus Mollis</div>
+                        <h3 class="about-us-title">{{ $aboutPage->middle_section_title }}</h3>
+                        <div class="about-us-caption greennature-title-font greennature-skin-info">{{ $aboutPage->middle_section_description }}</div>
                         <div class="about-us-title-divider"></div>
                     </div>
                     <div class="about-us-content-wrapper">
+                        {{-- content databazad string kimidir deyi text ele adminden melumati elave ve hemcinin sekil de elave ele--}}
                         <div class="about-us-content greennature-skin-content">
                             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                                 ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor
