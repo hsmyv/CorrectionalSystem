@@ -44,3 +44,4 @@ Route::get('/about', [AboutController::class, 'about_page'])->name("about.index"
 Route::post('/about', [AboutController::class, 'about_page_store'])->name("about.store");
 Route::get('/qa', [QaController::class, 'qa_page'])->name("qa.index");
 Route::get('/contact', [ContactController::class, 'contact_page'])->name("contact.index");
+Route::post('/contact', [ContactController::class, 'contact_page_store'])->name("contact.store");

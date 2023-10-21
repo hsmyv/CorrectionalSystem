@@ -72,24 +72,22 @@
                 <div id="text-6" class="widget widget_text greennature-item greennature-widget">
                     <h3 class="greennature-widget-title">Before Contacting Us</h3>
                     <div class="clear"></div>
-                    <div class="textwidget">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed
-                        eiusmod tempor incidunt ut labore et dolore magna aliqua. Non equidem invideo, miror
-                        magis posuere velit aliquet.</div>
+                    <div class="textwidget">{{$contactPage->before_contact_us}}</div>
                 </div>
                 <div id="text-7" class="widget widget_text greennature-item greennature-widget">
                     <h3 class="greennature-widget-title">Contact Information</h3>
                     <div class="clear"></div>
                     <div class="textwidget">
-                        <p>184 Main Collins Street West Victoria 8007 Australia</p>
+                        <p>{{$contactPage->address}}</p>
                         <p><i class="greennature-icon fa fa-phone"
                                 style="vertical-align: middle; color: #444444; font-size: 16px; "></i>
-                            1800-222-222</p>
+                                {{$contactPage->phone}}</p>
                         <p><i class="greennature-icon fa fa-envelope"
                                 style="vertical-align: middle; color: #444444; font-size: 16px; "></i>
-                            contact@yourdomain.com</p>
+                                {{$contactPage->mail}}</p>
                         <p><i class="greennature-icon fa fa-clock-o"
                                 style="vertical-align: middle; color: #444444; font-size: 16px; "></i>
-                            Everyday 9:00-17:00</p>
+                                {{$contactPage->schedule}}</p>
                     </div>
                 </div>
                 <div id="text-8" class="widget widget_text greennature-item greennature-widget">

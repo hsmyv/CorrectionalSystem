@@ -63,3 +63,17 @@ function aboutPageInputs()
 {
     return  ['upper_slide_title' => '', 'upper_slide_description' => '', 'middle_section_title' => '', 'middle_section_excerpt' => '', 'middle_section_content' => ''];
 }
+
+function contactPageInputs()
+{
+    return [
+    "map" => "",
+    "config_mail" => "",
+    "config_password" => "",
+    "address" => "",
+    "phone" => "",
+    "mail" => "",
+    "before_contact_us" => "",
+    "schedule" => ""
+    ];
+}

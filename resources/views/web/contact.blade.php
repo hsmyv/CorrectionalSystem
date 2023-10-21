@@ -5,10 +5,10 @@
         <div class="greennature-content">
 
             <!-- Above Sidebar Section-->
-            <x-web.contact.map />
+            <x-web.contact.map :contactPage="$contactPage"/>
 
             <!-- Sidebar With Content Section-->
-            <x-web.contact.form />
+            <x-web.contact.form :contactPage="$contactPage" />
 
             <!-- Below Sidebar Section-->
             <x-web.contact.feature />

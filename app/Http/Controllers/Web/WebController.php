@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutPage;
+use App\Models\ContactPage;
 use App\Models\HomePage;
 use App\Models\ServicePage;
 use Illuminate\Http\Request;
@@ -21,8 +22,8 @@ class WebController extends Controller
         return view("web.about", ["aboutPage" => $aboutPage]);    }
     public function contact()
     {
-        return view("web.contact");
-    }
+        $contactPage = ContactPage::first();
+        return view("web.contact", ["contactPage" => $contactPage]);    }
     public function service()
     {
         $servicePage = ServicePage::first();

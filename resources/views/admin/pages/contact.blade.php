@@ -44,7 +44,9 @@
                             <h4>Contact</h4>
                         </div>
                         <div class="widget-inner">
-                            <form class="edit-profile m-b30">
+                            <form class="edit-profile m-b30" action="{{ route('admin.contact.store') }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="ml-auto">
@@ -60,7 +62,7 @@
                                         <label class="col-form-label">Map</label>
                                         <div>
                                             <input name="map" class="form-control" type="text"
-                                                value="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19905.696399556287!2d-0.3007084089960577!3d51.417531259591925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s2334+Peterson+Street+Kingston+UK+London+H14D!5e0!3m2!1sen!2s!4v1546697086219">
+                                                value="{{ old('map', $contactPage->map) }}">
                                         </div>
                                     </div>
                                 </div>
@@ -75,15 +77,15 @@
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Mail </label>
                                         <div>
-                                            <input name="mail" class="form-control" type="text"
-                                                value="hsmusayev@gmail.com">
+                                            <input name="config_mail" class="form-control" type="text"
+                                                value="{{ old('config_mail', $contactPage->config_mail) }}">
 
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Password </label>
                                         <div>
-                                            <input name="password" class="form-control" type="password" value="">
+                                            <input name="config_password" class="form-control" type="password" value="{{ old('config_password', $contactPage->config_password) }}">
                                         </div>
                                     </div>
                                 </div>
@@ -100,14 +102,14 @@
                                         <label class="col-form-label">Address</label>
                                         <div>
                                             <input name="address" class="form-control" type="text"
-                                                value="184 Main Collins Street West Victoria 8007 Australia">
+                                                value="{{ old('address', $contactPage->address) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Phone</label>
                                         <div>
                                             <input name="phone" class="form-control" type="text"
-                                                value="1800-222-222">
+                                                value="{{ old('phone', $contactPage->phone) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
@@ -119,14 +121,14 @@
                                         <label class="col-form-label">Mail</label>
                                         <div>
                                             <input name="mail" class="form-control" type="text"
-                                                value="contact@yourdomain.com">
+                                                value="{{ old('mail', $contactPage->mail) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
                                         <label class="col-form-label">Schedule</label>
                                         <div>
                                             <input name="schedule" class="form-control" type="text"
-                                                value="Everyday 9:00-17:00">
+                                                value="{{ old('schedule', $contactPage->schedule) }}">
                                         </div>
                                     </div>
                                     <div class="form-group col-3">
@@ -134,13 +136,13 @@
                                     <div class="form-group col-6">
                                         <label class="col-form-label">Before Contacting Us</label>
                                         <div>
-                                            <textarea name="before_contact_us" class="form-control" type="text" value="">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Non equidem invideo, miror magis posuere velit aliquet.</textarea>
+                                            <textarea name="before_contact_us" class="form-control" type="text" value="{{ old('before_contact_us', $contactPage->before_contact_us) }}">{{ old('before_contact_us', $contactPage->before_contact_us) }}</textarea>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="col-12">
-                                    <button type="reset" class="btn">Save changes</button>
+                                    <button type="submit" class="btn">Save changes</button>
                                 </div>
                             </form>
                         </div>
