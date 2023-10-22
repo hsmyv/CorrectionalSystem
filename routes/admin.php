@@ -38,6 +38,7 @@ Route::get('/home', [HomeController::class, 'home_page'])->name("home.index");
 Route::post('/home', [HomeController::class, 'home_page_store'])->name("home.store");
 Route::get('/blog', [BlogController::class, 'blog_page'])->name("blog.index");
 Route::post('/blog', [BlogController::class, 'blog_page_store'])->name("blog.store");
+Route::post('/store-tags', [BlogController::class, 'tag_store'])->name("blog.tag.store");
 Route::get('/service', [ServiceController::class, 'service_page'])->name("service.index");
 Route::post('/service', [ServiceController::class, 'service_page_store'])->name("service.store");
 Route::get('/about', [AboutController::class, 'about_page'])->name("about.index");

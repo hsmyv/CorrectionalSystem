@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogPageRequest;
 use App\Models\BlogPage;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -12,10 +13,12 @@ class BlogController extends Controller
     public function blog_page()
     {
         $blogPage = BlogPage::first();
+        $tags = Tag::all();
+
         if (!$blogPage) {
             $blogPage = BlogPage::create(['upper_slide_title' => '', 'upper_slide_description' => '']);
         }
-        return view("admin.pages.blog", ['blogPage' => $blogPage]);
+        return view("admin.pages.blog", ['blogPage' => $blogPage, 'tags' => $tags]);
     }
     public function blog_page_store(BlogPageRequest $request)
     {
@@ -81,4 +84,15 @@ class BlogController extends Controller
     {
         //
     }
+
+    public function tag_store(Request $request)
+    {
+        $tagNames = $request->input('tag_names');
+        foreach ($tagNames as $tagName) {
+            Tag::create(['name' => $tagName]);
+    }
+    return redirect()->back();
+    }
+
+
 }

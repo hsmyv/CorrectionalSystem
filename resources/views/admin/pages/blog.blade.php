@@ -119,7 +119,47 @@
                             </form>
                             <div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x">
                             </div>
-                            <form class="edit-profile">
+                            <div class="row">
+                                <div class="col-12 m-t20">
+                                    <div class="ml-auto">
+                                        <h3 class="m-form__section">4. Add Item</h3>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <table id="item-add" style="width:100%;">
+                                        <tr class="list-item">
+                                            <td>
+                                                <div class="row">
+                                                    @foreach ($tags as $tag)
+
+                                                    <div class="col-md-4">
+
+                                                        <label class="col-form-label">Tag Name</label>
+                                                            <div>
+                                                            <input name="tag_name" class="form-control"
+                                                                type="text" value="{{$tag->name}}">
+                                                            </div>
+
+                                                    </div>
+
+                                                    <div class="col-md-2">
+                                                        <label class="col-form-label">Close</label>
+                                                        <div class="form-group">
+                                                            <a class="delete" href="#"><i
+                                                                    class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    @endforeach
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <form class="edit-profile" action="{{route('admin.blog.tag.store')}}" method="POST" >
+                                @csrf
                                 <div class="row">
                                     <div class="col-12 m-t20">
                                         <div class="ml-auto">
@@ -154,7 +194,7 @@
                                     <div class="col-12">
                                         <button type="button" class="btn-secondry add-item m-r5"><i
                                                 class="fa fa-fw fa-plus-circle"></i>Add Item</button>
-                                        <button type="reset" class="btn">Save changes</button>
+                                        <button type="submit" class="btn">Save changes</button>
                                     </div>
                                 </div>
                             </form>
