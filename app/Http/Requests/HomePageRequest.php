@@ -22,7 +22,8 @@ class HomePageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "first_slide_first_word" => 'nullable',
+            "first_slide_first_word" . config('app.locale') => 'required',
+            'first_slide_first_word.*' => 'string',
             "first_slide_second_word" => 'nullable',
             "first_slide_third_word" => 'nullable',
             "first_slide_button" => 'nullable',
