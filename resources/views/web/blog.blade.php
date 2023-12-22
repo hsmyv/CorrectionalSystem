@@ -116,13 +116,13 @@
                                                         </div>
                                                     </div> --}}
                                                 </div>
-                                                <div class="greennature-pagination"><span aria-current='page'
+                                                {{-- <div class="greennature-pagination"><span aria-current='page'
                                                         class='page-numbers current'>1</span>
                                                     <a class='page-numbers' href='page/2/index.html'>2</a>
                                                     <a class='page-numbers' href='page/3/index.html'>3</a>
                                                     <a class="next page-numbers" href="page/2/index.html">Next
                                                         &rsaquo;</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <div class="clear"></div>
                                         </div>
